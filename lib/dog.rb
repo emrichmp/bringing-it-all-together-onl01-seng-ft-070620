@@ -99,6 +99,7 @@ class Dog
     SET name = ?, breed = ?
     WHERE id = id
     SQL
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
   
 end
